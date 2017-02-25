@@ -4,7 +4,7 @@ with open('tokens.txt') as f:
 
 for token in tokens:
   graph = facebook.GraphAPI(token)
-  profile = graph.get_object("1627672137515445")
+  profile = graph.get_object("page_id_or_unique_name")
   posts = graph.get_connections(profile['id'], "posts")
   for post in posts['data']:
     try:
